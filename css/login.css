@@ -1,23 +1,23 @@
 body {
   margin: 0;
+  font-family: "Lato", 'sans-serif';
+  background-color: black;
 }
-
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 12% 68% auto;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr 1fr 2fr 1fr;
   grid-template-areas:
-  "a a a"
-  "b b b"
-  "c c c";
-  min-height: 100vh;
+  "h h h"
+  ". . ."
+  ". m ."
+  ". . . ";
 }
-
 header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  grid-area: a;
+  grid-area: h;
   font-family: 'Lato', 'sans-serif';
   color: Linen;
   background-color: PaleVioletRed;
@@ -36,7 +36,7 @@ header {
   font-size: 0.5em;
   padding-bottom: 10px;
 }
-#user {
+#home {
   align-self: center;
   font-size: 2em;
   margin-right: 1em;
@@ -45,41 +45,22 @@ header {
   border-radius: 50%;
   text-decoration: none;
 }
-a {
-  color: inherit;
-}
-
 main {
-  grid-area: b;
+  grid-area: m;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  background-color: black;
+  justify-content: space-evenly;
 }
-
-#pic {
-  max-width: 60%;
+#content {
   border: solid;
   border-color: white;
-  border-radius: 1em;
-}
-
-.footer {
-  grid-area: c;
-  display: flex;
-  flex-shrink: 2;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  background-color: black;
-}
-
-.menu-item {
-  font-size: 3em;
-  font-family: 'Lato', 'sans-serif';
-  padding: 1em;
-  border: solid;
-  border-color: white;
+  width: 50%;
+  text-align: center;
+  height: 100%;
   background-color: PaleVioletRed;
+  color: Linen; 
+}
+a {
+  color: inherit;
 }
