@@ -1,85 +1,71 @@
-body {
-  margin: 0;
+body, html {
+    height: 100%;
+    margin: 0;
 }
 
+/* The hero image */
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 12% 68% auto;
+  grid-template-rows: 1fr 5fr;
+  grid-template-columns: 1fr;
   grid-template-areas:
-  "a a a"
-  "b b b"
-  "c c c";
-  min-height: 100vh;
+  "h"
+  "main";
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/nature_7.jpg");
+
+  height: 100%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  font-family: 'Montserrat', 'sans-serif';
 }
 
 header {
+  grid-area: h;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  grid-area: a;
-  font-family: 'Lato', 'sans-serif';
-  color: Linen;
-  background-color: PaleVioletRed;
+  align-items: baseline;
+  color: #F7F9FB;
 }
-#title {
+#big {
+  color: #E8A87C;
   margin-left: 0.5em;
   display: flex;
   flex-direction: row;
   align-items: baseline;
+  justify-content: space-around;
 }
-#title h1{
+#big h1 {
+  margin-right: 0.2em;
+
+}
+#usr {
   font-size: 3em;
-  margin-right: 10px;
+  margin-right: 0.2em;
+  margin-top: 0.2em;
+  color: #8FC1E3;
 }
-#title h6 {
-  font-size: 0.5em;
-  padding-bottom: 10px;
+main {
+  grid-area: main;
+  color: #F7F9FB;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-#user {
-  align-self: center;
-  font-size: 2em;
-  margin-right: 1em;
-  padding: 0.2em;
-  border: solid;
-  border-radius: 50%;
+main button {
+  background-color: #E8A87C; ;
+  border: none;
+  color: #F7F9FB;
+  padding: 15px 32px;
+  text-align: center;
   text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 a {
   color: inherit;
-}
-
-main {
-  grid-area: b;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
-}
-
-#pic {
-  max-width: 60%;
-  border: solid;
-  border-color: white;
-  border-radius: 1em;
-}
-
-.footer {
-  grid-area: c;
-  display: flex;
-  flex-shrink: 2;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  background-color: black;
-}
-
-.menu-item {
-  font-size: 3em;
-  font-family: 'Lato', 'sans-serif';
-  padding: 1em;
-  border: solid;
-  border-color: white;
-  background-color: PaleVioletRed;
 }

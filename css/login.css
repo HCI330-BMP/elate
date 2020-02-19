@@ -1,39 +1,37 @@
 body {
   margin: 0;
-  font-family: "Lato", 'sans-serif';
-  background-color: black;
+  font-family: 'Montserrat', 'sans-serif';
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/nature_8.jpg");
 }
 .container {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: 1fr 1fr 2fr 1fr;
+  grid-template-rows: 1fr 2fr;
   grid-template-areas:
   "h h h"
-  ". . ."
-  ". m ."
-  ". . . ";
+  ". m .";
+
 }
 header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   grid-area: h;
-  font-family: 'Lato', 'sans-serif';
-  color: Linen;
-  background-color: PaleVioletRed;
+  font-family: 'Montserrat', 'sans-serif';
+  color: #F7F9FB;
+
 }
 #title {
+  color: #E8A87C;
   margin-left: 0.5em;
   display: flex;
   flex-direction: row;
   align-items: baseline;
 }
 #title h1{
-  font-size: 3em;
   margin-right: 10px;
 }
-#title h6 {
-  font-size: 0.5em;
+#title p{
   padding-bottom: 10px;
 }
 #home {
@@ -50,16 +48,20 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 #content {
   border: solid;
-  border-color: white;
+  border-color: Linen;
   width: 50%;
   text-align: center;
   height: 100%;
-  background-color: PaleVioletRed;
-  color: Linen; 
+  color: #F7F9FB;
+  border-radius: 1em;
+}
+#content h3 {
+  font-size: 2em;
+  color: #8FC1E3;
 }
 a {
   color: inherit;
