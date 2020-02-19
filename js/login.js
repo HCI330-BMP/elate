@@ -1,6 +1,6 @@
-function validate = () => {
-  var username = document.getElementById('username').value;
-  var passsword = document.getElementById('password').value;
+const validate = () => {
+  var username = document.querySelector('#username').value;
+  var passsword = document.querySelector('#password').value;
   if ( username == "johnsmith1" && password == "password1") {
     window.location = "user1.html";
     return false;
