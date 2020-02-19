@@ -58,6 +58,7 @@ main {
   height: 100%;
   color: #F7F9FB;
   border-radius: 1em;
+  padding-bottom: 20px;
 }
 #content h3 {
   font-size: 2em;
@@ -65,4 +66,20 @@ main {
 }
 a {
   color: inherit;
+}
+
+button {
+  font-family: 'Montserrat', 'sans-serif';
+  font-size: 16px;
+
+}
+
+button:hover {
+  background-color: #8FC1E3;
+  border: 1px solid #8FC1E3;
+  color: white;
+}
+
+input {
+  margin-bottom: 10px;
 }
