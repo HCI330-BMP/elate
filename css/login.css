@@ -18,11 +18,11 @@ header {
   justify-content: space-between;
   grid-area: h;
   font-family: 'Montserrat', 'sans-serif';
-  color: #F7F9FB;
+  color: #85DCBA;
 
 }
 #title {
-  color: #E8A87C;
+  color: #E3AFBC;
   margin-left: 0.5em;
   display: flex;
   flex-direction: row;
@@ -39,9 +39,8 @@ header {
   font-size: 2em;
   margin-right: 1em;
   padding: 0.2em;
-  border: solid;
-  border-radius: 50%;
   text-decoration: none;
+  color: #861657;;
 }
 main {
   grid-area: m;
@@ -52,16 +51,16 @@ main {
 }
 #content {
   border: solid;
-  border-color: Linen;
+  border-color: #FDE8E9;
   width: 50%;
   text-align: center;
   height: 100%;
-  color: #F7F9FB;
+  color: white;
   border-radius: 1em;
 }
 #content h3 {
   font-size: 2em;
-  color: #8FC1E3;
+  color: #DCABDF;
 }
 a {
   color: inherit;
