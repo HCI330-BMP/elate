@@ -7,7 +7,7 @@ const validate = () => {
     return true;
   }
   else if ( username == "buymepants" && password.value == "password2") {
-    location.replace("user2.html");
+    window.location.href = "user2.html"
     return true;
   }
   else {
