@@ -12,6 +12,7 @@ const validate = () => {
   }
   else {
     console.log("Invalid");
+    alert("Invalid credentials");
     return true;
   }
 }
