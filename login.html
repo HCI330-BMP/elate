@@ -5,7 +5,6 @@
 <link rel="stylesheet" href="css/login.css">
 <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://kit.fontawesome.com/8e63dc0792.js" crossorigin="anonymous"></script>
 <script src = "js/login.js"> </script>
@@ -25,15 +24,15 @@
     </header>
 
     <main>
-      <div id = "content">
+      <div id = "content" >
         <h3> Login Below </h3>
-        <form id = "login form">
+        <form id = "login form" action= 'user1.html' method = 'POST'>
           <label for="uname">Username:</label><br>
-          <input style = "font-family: 'Montserrat', 'sans-serif'; font-size: 13px;" type="text" id="username" name="username"><br>
+          <input style = "font-family: 'Montserrat', 'sans-serif'; font-size: 13px;" type="text" id="username"><br>
           <label for="password">Password:</label><br>
-          <input style = "font-family: 'Montserrat', 'sans-serif'; font-size: 13px;" type="password" id="password" name="password">
+          <input style = "font-family: 'Montserrat', 'sans-serif'; font-size: 13px;" type="password" id="password">
         </form>
-        <button type = "loginbutton" form = "login form" value = "Log In" onclick = validate() id = "login_button"> Log In </button>
+        <button id = "login_button" onclick = validate()> Log In </button>
       </div>
     <main>
   </div>

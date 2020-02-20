@@ -1,17 +1,17 @@
 const validate = () => {
   var username = document.querySelector('#username').value;
-  var passsword = document.querySelector('#password').value;
-  if ( username == "johnsmith1" && password == "password1") {
-    window.location = "user1.html";
-    return false;
+  var password = document.querySelector('#password');
+
+  if (username == "johnsmith1" && password.value == "password1") {
+    window.location.href = "user1.html";
+    return true;
   }
-  else if ( username == "buymepants" && password == "password2") {
-    window.location = "user2.html";
-    return false;
+  else if ( username == "buymepants" && password.value == "password2") {
+    location.replace("user2.html");
+    return true;
   }
   else {
-    alert("Invalid credentials.");
+    console.log("Invalid");
+    return true;
   }
 }
-
-document.querySelector('#login_button').onclick = validate();

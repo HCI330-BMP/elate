@@ -3,7 +3,6 @@ body, html {
     margin: 0;
 }
 
-/* The hero image */
 .container {
   display: grid;
   grid-template-rows: 1fr 6fr;
