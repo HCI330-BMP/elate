@@ -46,15 +46,16 @@ header {
   margin-top: 0px;
   font-size: 0.8em;
 }
+
+#username {
+  font-size: 1em;
+}
 #home {
+  color: #8FC1E3;
   align-self: flex-start;
   margin-top: 0.2em;
   font-size: 2.5em;
   margin-right: 0.2em;
-  color: #8FC1E3;
-}
-#username {
-  font-size: 1em;
 }
 
 main {

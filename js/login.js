@@ -11,7 +11,17 @@ const validate = () => {
     return true;
   }
   else {
-    console.log("Invalid");
+    alert("Invalid credentials");
     return true;
   }
 }
+
+const validateKey = () => {
+  console.log("hello");
+  ev = this.event
+  console.log(ev.keyCode)
+  if (ev.keyCode === 13) {
+    ev.preventDefault();
+    validate();
+  }
+};
