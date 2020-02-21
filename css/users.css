@@ -27,30 +27,35 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: baseline;
-  color: #F7F9FB;
+  align-items: flex-start;
+  color: #E3AFBC;
 }
 #big {
-  color: #E8A87C;
-  margin-left: 0.5em;
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  justify-content: space-around;
+  margin-left: 0.1em;
+  padding-left: 0px;
+  margin-bottom: 0px;
+
 }
 #big h1 {
-  margin-right: 0.2em;
-
-}
-#usr {
+  text-align: left;
   font-size: 3em;
-  margin-right: 0.2em;
-  margin-top: 0.2em;
-  color: #8FC1E3;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
+#big p {
+  margin-top: 0px;
+  font-size: 0.8em;
+}
+
 #username {
   font-size: 1em;
-
+}
+#home {
+  color: #8FC1E3;
+  align-self: flex-start;
+  margin-top: 0.2em;
+  font-size: 2.5em;
+  margin-right: 0.2em;
 }
 
 main {
