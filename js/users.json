@@ -1,0 +1,16 @@
+{
+  "user1": {
+    "username": "johnsmith",
+    "password": "password1",
+    "user_since": "02/19/2020",
+    "email": "johnsmith1@gmail.com",
+    "n_jour": 8
+  },
+  "user2": {
+    "username": "buymepants",
+    "password": "password2",
+    "user_since": "02/09/2020",
+    "email": "buymepants@gmail.com",
+    "n_jour": 2
+  }
+}
