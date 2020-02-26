@@ -59,6 +59,7 @@ main {
   display: flex;
   flex-direction: column;
   padding-left: 10px;
+  border: 1px solid white;
 }
 
 h3 {
@@ -71,12 +72,14 @@ textarea {
   margin-bottom: 10px;
   font-family: 'Montserrat', 'sans-serif';
   resize: none;
+  border-radius: 5px;
 }
 
 input {
   margin-top: 2px;
   margin-bottom: 10px;
   font-family: 'Montserrat', 'sans-serif';
+  border-radius: 5px;
 }
 
 button {
