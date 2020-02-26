@@ -2,12 +2,16 @@
 <title>Elate</title>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <link rel="stylesheet" href="css/login.css">
 <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="https://kit.fontawesome.com/8e63dc0792.js" crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src = "js/login.js"> </script>
+<script src="https://kit.fontawesome.com/8e63dc0792.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
   <div class = "container">
@@ -26,13 +30,14 @@
     <main>
       <div id = "content" >
         <h3> Login Below </h3>
-        <form id = "login form" action= 'user1.html' method = 'POST'>
+        <form id = "login" action= 'user1.html' method = 'get'>
           <label for="uname">Username:</label><br>
-          <input style = "font-family: 'Montserrat', 'sans-serif'; font-size: 13px;" type="text" id="username"><br>
+          <input  type="text" id="username"><br>
           <label for="password">Password:</label><br>
-          <input style = "font-family: 'Montserrat', 'sans-serif'; font-size: 13px;" type="password" id="password" onkeyup = "validateKey()">
+          <input  type="password" id="password" onkeyup="validateKey()">
+
         </form>
-        <button id = "login_button" onclick = validate()> Log In </button>
+        <button type = "submit" onclick = "validate()" > Log in </button>
       </div>
     <main>
   </div>
