@@ -3,14 +3,15 @@ body, html {
     margin: 0;
 }
 
+/* The hero image */
 .container {
   display: grid;
-  grid-template-columns: 1fr;
   grid-template-rows: 1fr 5fr;
+  grid-template-columns: 1fr;
   grid-template-areas:
   "h"
   "main";
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/nature_6.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/nature_7.jpg");
 
   height: 100%;
 
@@ -26,18 +27,19 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: flex-start;
   color: #E3AFBC;
 }
-
 #big {
   margin-left: 0.1em;
+  padding-left: 0px;
   margin-bottom: 0px;
+
 }
 #big h1 {
+  text-align: left;
   font-size: 3em;
   margin-top: 0px;
-  margin-right: 0.2em;
   margin-bottom: 0px;
 }
 #big p {
@@ -45,12 +47,15 @@ header {
   font-size: 0.8em;
 }
 
+#username {
+  font-size: 1em;
+}
 #home {
+  color: #8FC1E3;
   align-self: flex-start;
   margin-top: 0.2em;
   font-size: 2.5em;
   margin-right: 0.2em;
-  color: #861657;
 }
 
 main {
@@ -58,34 +63,25 @@ main {
   color: #F7F9FB;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-
-#content{
+#profbox {
   background-color: #E8A87C;
-  border: 1px solid white;
   border-radius: 10%;
   margin: auto;
-  padding: 10px 40px;
+  padding: 64px 128px
 }
 
-h3 {
-  text-decoration: underline;
-  font-size: 1.5em;
+#buttons {
+  background-color: #E3AFBC; /*orange  E8A87C  */ /*pink   E3AFBC */
+  border-radius: 10%;
+  margin: auto;
+  padding: 16px 32px
 }
 
-textarea {
-  margin-top: 2px;
-  margin-bottom: 10px;
-  font-family: 'Montserrat', 'sans-serif';
-  resize: none;
-  border-radius: 5px;
-}
-
-input {
-  margin-top: 2px;
-  margin-bottom: 10px;
-  font-family: 'Montserrat', 'sans-serif';
-  border-radius: 5px;
+main p, h1 {
+  text-align: center;
 }
 
 button {
@@ -93,10 +89,18 @@ button {
   margin-bottom: 10px;
   font-family: 'Montserrat', 'sans-serif';
   font-size: 15px;
+  height: 50px;
+  width: 250px;
+  border-radius: 25px;
+
 }
 
 button:hover {
-  background-color: #8FC1E3;
-  border: 1px solid #8FC1E3;
+  background-color: #8FC1E3; /*blue 8FC1E3 */
+  /*border: 1px solid #8FC1E3;*/
   color: white;
+}
+
+a {
+  color: inherit;
 }

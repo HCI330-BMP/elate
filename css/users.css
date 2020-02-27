@@ -91,8 +91,9 @@ main button {
   border-radius: 20%
 }
 main button:hover {
-  background-color: #8FC1E3;
-  color:  #F7F9FB;
+  background-color: #8FC1E3; /*blue 8FC1E3 */
+  /*border: 1px solid #8FC1E3;*/
+  color: white;
 }
 
 a {

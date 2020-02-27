@@ -58,14 +58,7 @@ main {
   color: #F7F9FB;
   display: flex;
   flex-direction: column;
-}
-
-#content{
-  background-color: #E8A87C;
-  border: 1px solid white;
-  border-radius: 10%;
-  margin: auto;
-  padding: 10px 40px;
+  padding-left: 10px;
 }
 
 h3 {
@@ -78,14 +71,12 @@ textarea {
   margin-bottom: 10px;
   font-family: 'Montserrat', 'sans-serif';
   resize: none;
-  border-radius: 5px;
 }
 
 input {
   margin-top: 2px;
   margin-bottom: 10px;
   font-family: 'Montserrat', 'sans-serif';
-  border-radius: 5px;
 }
 
 button {
@@ -93,6 +84,9 @@ button {
   margin-bottom: 10px;
   font-family: 'Montserrat', 'sans-serif';
   font-size: 15px;
+  height: 50px;
+  width: 250px;
+  border-radius: 25px;
 }
 
 button:hover {
