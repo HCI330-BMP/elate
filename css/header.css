@@ -29,7 +29,7 @@ header {
 .dropdown {
   display: flex;
   flex-direction: row-reverse;
-  margin-right: 1em;
+  margin-right: .1em;
   justify-content: center;
 }
 .dropdownbtn {
