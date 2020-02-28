@@ -67,14 +67,13 @@ main {
   justify-content: center;
 }
 #profbox {
-  background-color: #E8A87C;
   border-radius: 10%;
   margin: auto;
   padding: 64px 128px
 }
 
 #buttons {
-  background-color: #E3AFBC; /*orange  E8A87C  */ /*pink   E3AFBC */
+  background-color: #E7717D; /*orange  E8A87C  */ /*pink   E3AFBC */
   border-radius: 10%;
   margin: auto;
   padding: 16px 32px
