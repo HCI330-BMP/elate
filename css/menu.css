@@ -22,41 +22,7 @@ body, html {
   font-family: 'Montserrat', 'sans-serif';
 }
 
-header {
-  grid-area: h;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  color: #E3AFBC;
-}
-#big {
-  margin-left: 0.1em;
-  padding-left: 0px;
-  margin-bottom: 0px;
 
-}
-#big h1 {
-  text-align: left;
-  font-size: 3em;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-#big p {
-  margin-top: 0px;
-  font-size: 0.8em;
-}
-
-#username {
-  font-size: 1em;
-}
-#home {
-  color: #8FC1E3;
-  align-self: flex-start;
-  margin-top: 0.2em;
-  font-size: 2.5em;
-  margin-right: 0.2em;
-}
 
 main {
   grid-area: main;
@@ -83,7 +49,7 @@ main p, h1 {
   text-align: center;
 }
 
-button {
+main button {
   margin-top: 2px;
   margin-bottom: 10px;
   font-family: 'Montserrat', 'sans-serif';
@@ -94,7 +60,7 @@ button {
 
 }
 
-button:hover {
+main button:hover {
   background-color: #8FC1E3; /*blue 8FC1E3 */
   /*border: 1px solid #8FC1E3;*/
   color: white;
@@ -103,3 +69,45 @@ button:hover {
 a {
   color: inherit;
 }
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 1em;
+  justify-content: center;
+}
+.dropdownbtn {
+  font-size: 3em;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  margin-right: 0.2em;
+  text-align: center;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}

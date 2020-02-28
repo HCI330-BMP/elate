@@ -21,41 +21,6 @@ body, html {
   font-family: 'Montserrat', 'sans-serif';
 }
 
-header {
-  grid-area: h;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: baseline;
-  color: #E3AFBC;
-}
-a {
-  color: inherit;
-}
-
-#big {
-  margin-left: 0.1em;
-  margin-bottom: 0px;
-}
-#big h1 {
-  font-size: 3em;
-  margin-top: 0px;
-  margin-right: 0.2em;
-  margin-bottom: 0px;
-}
-#big p {
-  margin-top: 0px;
-  font-size: 0.8em;
-}
-
-#home {
-  align-self: flex-start;
-  margin-top: 0.2em;
-  font-size: 2.5em;
-  margin-right: 0.2em;
-  color: #8FC1E3;
-}
-
 main {
   grid-area: main;
   color: #F7F9FB;
