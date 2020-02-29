@@ -2,12 +2,15 @@
 <title>Elate</title>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link rel="stylesheet" href="css/new_journal.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <script src="https://kit.fontawesome.com/8e63dc0792.js" crossorigin="anonymous"></script>
   <script src = "js/login.js"> </script>
+  <script src = "js/journal_entry.js"> </script>
 </head>
 <body>
   <div class = "container">
@@ -34,7 +37,7 @@
           <label for = "j_entry"> Entry:</label> <br>
           <textarea id = "j_entry" name = "j_entry" style = "width:500px; height:200px"> </textarea> <br>
           <label for = "j_feeling"> How were you feeling at this point? (Choose from the list or write a customized feeling.)</label> <br>
-          <input list = "feelings" name = "feeling" style = "width:300px">
+          <input id = "j_feelings" list = "feelings" name = "feeling" style = "width:300px">
           <datalist id = "feelings">
             <option>Happy</option>
             <option>Sad</option>
@@ -51,8 +54,8 @@
           <label> Add a tag! (e.g. school, work, sports, etc) </label> <br>
           <input type = "text" id = "j_tag" name = "j_tag"> <br>
           <!-- Add a button that allows for additional tags to be added -->
-          <button id = "add_entry"> Add to Journal </button>
         </form>
+        <button id = "add_entry" onclick = "saveEntry();"> Add to Journal </button>
       </div>
     </main>
 </html>
