@@ -16,14 +16,15 @@
 <script src = "js/menu.js"> </script>
 <script src="https://kit.fontawesome.com/8e63dc0792.js" crossorigin="anonymous"></script>
 </head>
-<body onload = "addUserInfo(); loadHeader()">
+<body onload = "loadHeader(); personalizeLinks();">
   <div class="container">
     <header>
     </header>
     <main>
       <div id="buttons">
-        <button onclick = "location.href = 'journal_home.html';">
-          Journal</button> <br>
+        <a href = "journal_home.html">
+          <button> Journal</button> <br>
+        </a>
         <button>
           <!-- onclick = "location.href = 'goals.html';" -->
           Goals</button> <br>
@@ -33,8 +34,9 @@
         <button>
           <!-- onclick = "location.href = 'journal_home.html';" -->
           Settings</button> <br>
-        <button onclick = "location.href = 'user.html';">
-          My Profile</button>
+        <a href = "user.html">
+          <button> My Profile</button>
+        </a>
       </div>
     </main>
   </div>
