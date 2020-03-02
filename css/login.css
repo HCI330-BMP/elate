@@ -68,7 +68,6 @@ button {
 
 button:hover {
   background-color: #8FC1E3;
-  border: 1px solid #8FC1E3;
   color: white;
 }
 
@@ -80,4 +79,35 @@ input {
 a {
   text-decoration: none;
   color: inherit;
+}
+input {
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.3rem;
+  padding: 7px 0;
+  background: transparent;
+  color: #FDE8E9;
+  transition: border-color 0.2s;
+}
+input:focus {
+  border-bottom-color:  8FC1E3;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: #fff !important;
+}
+
+button {
+  background-color: #861657;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }

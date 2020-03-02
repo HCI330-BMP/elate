@@ -16,18 +16,27 @@ const loadHeader = () => {
 }
 
 const randomBackground = () => {
-  console.log("Hello");
+  if (sessionStorage.getItem('last_background') == null) {
+    var background = 0;
+    sessionStorage.setItem('last_background', background);
+  } else {
+    console.log('new_background');
+    var background = parseInt(sessionStorage.getItem('last_background'));
+    background += 1;
+    background = background % 5
+
+    sessionStorage.setItem('last_background', background)
+  }
+  console.log(background)
   body = document.querySelector('body');
 
-  num = Math.random();
-  console.log(num);
-  if ( 0 < num < 0.2) {
+  if (background == 0) {
     body.style.backgroundImage = "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/nature_2.jpg)";
-  } else if(0.2 < num < 0.4) {
+  } else if(background == 1) {
     body.style.backgroundImage = "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/nature_3.jpg)";
-  } else if(0.4 < num < 0.6) {
+  } else if(background == 2) {
     body.style.backgroundImage = "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(images/nature_9.jpg)";
-  } else if(0.6 < num < 0.8) {
+  } else if(background == 3) {
     body.style.backgroundImage = "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/nature_5.jpg)";
   } else {
     body.style.backgroundImage = "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/nature_7.jpg)";
