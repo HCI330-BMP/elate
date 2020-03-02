@@ -31,7 +31,7 @@ const randomBackground = () => {
   body = document.querySelector('body');
 
   if (background == 0) {
-    body.style.backgroundImage = "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/nature_2.jpg)";
+    body.style.backgroundImage = "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/nature_7.jpg)";
   } else if(background == 1) {
     body.style.backgroundImage = "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/nature_3.jpg)";
   } else if(background == 2) {
@@ -39,7 +39,7 @@ const randomBackground = () => {
   } else if(background == 3) {
     body.style.backgroundImage = "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/nature_5.jpg)";
   } else {
-    body.style.backgroundImage = "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/nature_7.jpg)";
+    body.style.backgroundImage = "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/nature_2.jpg)";
   }
   body.style.height = 100;
   body.style.backgroundPosition = 'center';
