@@ -17,8 +17,9 @@ const loadHeader = () => {
 
 const randomBackground = () => {
   if (sessionStorage.getItem('last_background') == null) {
-    var background = math.Random() * 5;
-    var background = math.floor(background);
+    var background = Math.random() * 5;
+    var background = Math.floor(background);
+    console.log(background);
     sessionStorage.setItem('last_background', background);
   } else {
     console.log('new_background');
