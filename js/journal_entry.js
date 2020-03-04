@@ -13,12 +13,14 @@ document.getElementById('j_date').innerHTML += date_start;
 document.getElementById('j_date').innerHTML += time;
 document.getElementById('j_date').style.fontSize = "100%";
 
+let final_date = "" + date_start + time;
+
 const saveEntry = () => {
   //Collect Entry Info
   //date = document.querySelector("#j_date").value;
-  date = "placeholder"
+  date = final_date;
   title = document.querySelector("#j_title").value;
-  entry = document.querySelector('#j_entry').value;
+  description = document.querySelector('#j_entry').value;
   feels = document.querySelector('#j_feelings').value;
   tag = document.querySelector('#j_tag').value;
 
@@ -38,7 +40,7 @@ const saveEntry = () => {
   console.log('j_date' + entry.toString());
   sessionStorage.setItem('j_date' + entry.toString(), date);
   sessionStorage.setItem('j_title' + entry.toString(), title);
-  sessionStorage.setItem('j_entry' + entry.toString(), entry);
+  sessionStorage.setItem('j_entry' + entry.toString(), description);
   sessionStorage.setItem('j_feels' + entry.toString(), feels);
   sessionStorage.setItem('j_tag' + entry.toString(), tag);
   console.log('items saved')
