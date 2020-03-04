@@ -1,11 +1,12 @@
 document.querySelector('#entry_section').innerHTML = ``;
 
 var b;
-
+/*
 console.log("session storage");
 for (b = 0; b < sessionStorage.length; b++) {
     console.log(sessionStorage.key(b) + "=[" + sessionStorage.getItem(sessionStorage.key(b)) + "]");
 }
+*/
 
 let num = 1;
 console.log(sessionStorage.getItem("j_date" +num));

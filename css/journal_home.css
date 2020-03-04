@@ -1,6 +1,9 @@
 body, html {
     height: 100%;
     margin: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/nature_6.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 .container {
@@ -10,7 +13,6 @@ body, html {
   grid-template-areas:
   "h"
   "main";
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/nature_6.jpg");
 
   height: 100%;
 
@@ -21,21 +23,23 @@ body, html {
   font-family: 'Montserrat', 'sans-serif';
 }
 
-main {
-  grid-area: main;
+#entry_section {
   color: #F7F9FB;
   display: flex;
-  flex-direction: row;
+  flex-flow: wrap;
   padding-left: 10px;
 }
 
 .journal_entries {
-  flex: 45%;
+  height: 400px;
+  width: 400px;
   margin: 5%;
   background-color: #E8A87C;
   border: 1px solid white;
   border-radius: 10%;
   padding: 10px 40px;
+  justify-content: center;
+  align-content: center;
 }
 
 h3 {

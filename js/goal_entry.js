@@ -11,34 +11,36 @@ document.getElementById('g_date_start').innerHTML += date_start;
 document.getElementById('g_date_start').style.fontSize = "100%";
 
 
-/*
-const saveEntry = () => {
+
+const saveGoal = () => {
   //Collect Entry Info
-  date = document.querySelector("#j_date").value;
-  title = document.querySelector("#j_title").value;
-  entry = document.querySelector('#j_entry').value;
-  feels = document.querySelector('#j_feelings').value;
-  tag = document.querySelector('#j_tag').value;
+  date = date_start;
+  date_end = document.querySelector("#g_date_end").value;
+  title = document.querySelector("#g_title").value;
+  description = document.querySelector('#g_entry').value;
+  reward = document.querySelector('#g_reward').value;
+  points = document.querySelector('#points').value;
 
   //Check if first Entry
-  if(sessionStorage.getItem('n_entry') == null){
+  if(sessionStorage.getItem('goal_entry') == null){
     var entry = 1;
-    sessionStorage.setItem('n_entry', entry);
+    sessionStorage.setItem('goal_entry', entry);
   } else {
-    var entry = sessionStorage.getItem('n_entry');
+    var entry = sessionStorage.getItem('goal_entry');
     entry = parseInt(entry);
     entry += 1;
-    sessionStorage.setItem('n_entry', entry);
+    sessionStorage.setItem('goal_entry', entry);
   }
 
   //Set Item
   console.log(entry);
-  console.log('j_date' + entry.toString());
-  sessionStorage.setItem('j_date' + entry.toString(), date);
-  sessionStorage.setItem('j_title' + entry.toString(), title);
-  sessionStorage.setItem('j_entry' + entry.toString(), entry);
-  sessionStorage.setItem('j_feels' + entry.toString(), feels);
-  sessionStorage.setItem('j_tag' + entry.toString(), tag);
+  console.log('g_date' + entry.toString());
+  sessionStorage.setItem('g_date' + entry.toString(), date);
+  sessionStorage.setItem('g_date_end' + entry.toString(), date_end);
+  sessionStorage.setItem('g_title' + entry.toString(), title);
+  sessionStorage.setItem('g_entry' + entry.toString(), description);
+  sessionStorage.setItem('g_reward' + entry.toString(), reward);
+  sessionStorage.setItem('g_points' + entry.toString(), points);
   console.log('items saved')
+  window.location.href = "goals.html"
 }
-*/
