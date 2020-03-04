@@ -17,7 +17,7 @@ const saveGoal = () => {
   date = date_start;
   date_end = document.querySelector("#g_date_end").value;
   title = document.querySelector("#g_title").value;
-  entry = document.querySelector('#g_entry').value;
+  description = document.querySelector('#g_entry').value;
   reward = document.querySelector('#g_reward').value;
   points = document.querySelector('#points').value;
 
@@ -38,7 +38,7 @@ const saveGoal = () => {
   sessionStorage.setItem('g_date' + entry.toString(), date);
   sessionStorage.setItem('g_date_end' + entry.toString(), date_end);
   sessionStorage.setItem('g_title' + entry.toString(), title);
-  sessionStorage.setItem('g_entry' + entry.toString(), entry);
+  sessionStorage.setItem('g_entry' + entry.toString(), description);
   sessionStorage.setItem('g_reward' + entry.toString(), reward);
   sessionStorage.setItem('g_points' + entry.toString(), points);
   console.log('items saved')
