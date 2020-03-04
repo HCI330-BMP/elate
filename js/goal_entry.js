@@ -1,11 +1,14 @@
+
+
 let n =  new Date();
 let y = n.getFullYear();
 let m = n.getMonth() + 1;
 let d = n.getDate();
 let date_start = " " + m + "/" + d + "/" + y;
 
-document.querySelector("#g_date_start").innerHTML = date_start;
-console.log("date_start");
+
+document.getElementById('g_date_start').innerHTML += date_start;
+document.getElementById('g_date_start').style.fontSize = "100%";
 
 
 /*

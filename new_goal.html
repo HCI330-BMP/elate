@@ -10,7 +10,6 @@
 
   <script src="https://kit.fontawesome.com/8e63dc0792.js" crossorigin="anonymous"></script>
   <script src = "js/login.js"> </script>
-  <script src = "js/goal_entry.js"> </script>
   <script src = "js/menu.js"> </script>
 </head>
 <body>
@@ -18,7 +17,7 @@
     <header>
       <div id = "big" >
         <h1> Elate </h1>
-        <p> Remember the good times <p>
+        <p> Remember the good times </p>
       </div>
       <span id = "home">
         <a href = "menu.html">
@@ -30,6 +29,7 @@
     <main>
       <div id = "content" >
         <h3> New Goal</h3>
+        <p id="g_date_start"> Start Goal Date: </p>
         <form>
           <label for="g_date_end"> Set End Goal Date:</label> <br>
           <input type ="date" id ="g_date_end" name = "g_date_end"> <br>
@@ -57,4 +57,7 @@
         <button id="cancel_goal" onclick = "location.href = 'goals.html';"> Cancel </button>
       </div>
     </main>
+  </div>
+  <script src = "js/goal_entry.js"> </script>
+</body>
 </html>

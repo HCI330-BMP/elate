@@ -29,7 +29,7 @@ main {
   padding-left: 10px;
 }
 
-#journal_entries {
+.journal_entries {
   flex: 45%;
   margin: 5%;
   background-color: #E8A87C;
