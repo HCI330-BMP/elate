@@ -1,0 +1,60 @@
+<html>
+<title>Elate</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/new_journal.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="https://kit.fontawesome.com/8e63dc0792.js" crossorigin="anonymous"></script>
+  <script src = "js/login.js"> </script>
+  <script src = "js/goal_entry.js"> </script>
+  <script src = "js/menu.js"> </script>
+</head>
+<body>
+  <div class = "container">
+    <header>
+      <div id = "big" >
+        <h1> Elate </h1>
+        <p> Remember the good times <p>
+      </div>
+      <span id = "home">
+        <a href = "menu.html">
+          <i class="fas fa-home"></i>
+        </a>
+      </span>
+    </header>
+
+    <main>
+      <div id = "content" >
+        <h3> New Goal</h3>
+        <form>
+          <label for="g_date_end"> Set End Goal Date:</label> <br>
+          <input type ="date" id ="g_date_end" name = "g_date_end"> <br>
+          <label for = "g_title"> Goal Title:</label> <br>
+          <textarea id = "g_title" name = "g_title" style = "width:300px; height:25px"> </textarea><br>
+          <label for = "g_entry"> Description of Goal:</label> <br>
+          <textarea id = "g_entry" name = "g_entry" style = "width:500px; height:75px"> </textarea> <br>
+          <label for = "g_reward"> Completion Reward:</label> <br>
+          <textarea id = "g_reward" name = "g_entry" style = "width:500px; height:75px"> </textarea> <br>
+          <label for = "g_points"> How many points does the goal deserve (priority)? </label> <br>
+          <select id = "points" >
+            <option>10</option>
+            <option>20</option>
+            <option>30</option>
+            <option>40</option>
+            <option>50</option>
+            <option>60</option>
+            <option>70</option>
+            <option>80</option>
+            <option>90</option>
+            <option>100</option>
+          </select> <br>
+        </form>
+        <button id="add_goal" onclick = "saveGoal();"> Add to Goals </button>
+        <button id="cancel_goal" onclick = "location.href = 'goals.html';"> Cancel </button>
+      </div>
+    </main>
+</html>
