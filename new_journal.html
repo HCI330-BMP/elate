@@ -10,7 +10,7 @@
 
   <script src="https://kit.fontawesome.com/8e63dc0792.js" crossorigin="anonymous"></script>
   <script src = "js/login.js"> </script>
-  <script src = "js/journal_entry.js"> </script>
+
 </head>
 <body>
   <div class = "container">
@@ -29,9 +29,8 @@
     <main>
       <div id = "content" >
         <h3> New Journal Entry</h3>
+        <p id="j_date"> Date of Entry:</p>
         <form>
-          <label for = "j_date"> Date of Entry:</label> <br>
-          <input type = "date" id = "j_date" name = "j_date"> <br>
           <label for = "j_title"> Entry Title/Brief Description:</label> <br>
           <textarea id = "j_title" name = "j_title" style = "width:300px; height:50px"> </textarea><br>
           <label for = "j_entry"> Entry:</label> <br>
@@ -59,4 +58,7 @@
         <button id="cancel_goal" onclick = "location.href = 'journal_home.html';"> Cancel </button>
       </div>
     </main>
+  </div>
+  <script src = "js/journal_entry.js"> </script>
+</body>
 </html>
