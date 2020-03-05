@@ -1,35 +1,78 @@
 <html>
 <title>Elate</title>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
   <link rel="stylesheet" href="css/journal_home.css">
-  <link rel = 'stylesheet' href = 'css/header.css'>
+  <link rel='stylesheet' href='css/header.css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://kit.fontawesome.com/8e63dc0792.js" crossorigin="anonymous"></script>
-  <script src = "js/login.js"> </script>
-  <script src = "js/menu.js"> </script>
+  <script src="js/login.js"> </script>
+  <script src="js/menu.js"> </script>
+  <script src ="js/journal_home.js"> </script>
 </head>
-<body onload = "loadHeader();">
-  <div class = "container">
+
+<body onload="loadHeader(); populateEntries(); personalizeLinks();">
+  <div class="container">
     <header>
     </header>
     <main>
-      <button onclick = "location.href = 'new_journal.html';">
+      <button onclick="askEntry()">
         <!-- 43 thingy is an image i guess -->
         <span>&#43;</span> Add Journal Entry
       </button>
-      <section id="entry_section">
+      <div id="content">
+        <h3> New Journal Entry</h3>
+        <form>
+          <label for "j_date"> Enter Date:
+             <span class = "req">  * </span>
+          </label> <br>
+          <input id = "j_date" type = "date"> </input> </br>
+          <label for="j_title"> Enter Title:
+             <span class = "req">  * </span>
+          </label> <br>
+          <input id="j_title" name="j_title"> </input><br>
+          <label for="j_entry"> Entry:
+            <span class = "req">  * </span>
+          </label> <br>
+          <textarea id="j_entry" name="j_entry" onkeyup="textAreaAdjust()"> </textarea> <br>
+          <label for="j_feeling"> How were you feeling at this point? (Choose from the list or write a customized feeling.)</label> <br>
+          <input id="j_feelings" list="feelings" name="feeling">
+          <datalist id="feelings">
+            <option>Happy</option>
+            <option>Sad</option>
+            <option>Angry</option>
+            <option>Excited</option>
+            <option>Afraid</option>
+            <option>Disgusted</option>
+            <option>Anxious</option>
+            <option>Satisfied</option>
+            <option>Embarassed</option>
+            <option>Jealous</option>
+            <option>Amused</option>
+          </datalist> <br>
+          <label> Add a tag! (e.g. school, work, sports, etc) </label> <br>
+          <input type="text" id="j_tag" name="j_tag"> <br>
+          <!-- Add a button that allows for additional tags to be added -->
+        </form>
+        <div class = "buttons">
+          <button id="add_entry" onclick="saveEntry(); closeEntry()"> Add to Journal </button>
+          <button id="cancel_goal" onclick="closeEntry();"> Cancel </button>
+        </div>
+      </div>
+
+      <section id="entry_section" onload = "populateEntries">
       </section>
     </main>
 
   </div>
-  <script src = "js/journal_home.js"> </script>
 </body>
 
 </html>

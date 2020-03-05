@@ -10,26 +10,65 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
-
   <script src="https://kit.fontawesome.com/8e63dc0792.js" crossorigin="anonymous"></script>
   <script src = "js/login.js"> </script>
   <script src = "js/menu.js"> </script>
+  <script src = "js/goals_home.js"> </script>
 </head>
-<body onload = "loadHeader();">
+<body onload = "loadHeader(); populateGoals();personalizeLinks();">
   <div class = "container">
     <header>
     </header>
-
     <main>
-      <button onclick = "location.href = 'new_goal.html';">
+      <button onclick = "askGoal();">
         <!-- 43 thingy is an image i guess -->
         <span>&#43;</span> Add New Goal
       </button>
+      <div id = "content" >
+        <h3> New Goal</h3>
+        <p id="g_date_start"> Start Goal Date: </p>
+        <form>
+          <label for="g_date_end"> Set End Goal Date:
+            <span class = "req">  * </span>
+          </label> <br>
+          <input type ="date" id ="g_date_end" name = "g_date_end"> <br>
+          <label for = "g_title"> Goal Title:
+          <span class = "req">  * </span>
+        </label> <br>
+          <textarea id = "g_title" name = "g_title" placeholder= "e.g. 'Stay positive!'" style = "width:300px; height:25px"></textarea><br>
+          <label for = "g_entry"> Description of Goal:
+            <span class = "req">  * </span>
+        </label> <br>
+          <textarea id = "g_entry" name = "g_entry" placeholder= "e.g. 'Make one positive journal entry each day this week.'" style = "width:500px; height:75px"></textarea> <br>
+          <label for = "g_reward"> Completion Reward:
+            <span class = "req">  * </span>
+        </label> <br>
+          <textarea id = "g_reward" name = "g_entry" placeholder= "e.g. 'Get pizza for dinner this Friday night!" style = "width:500px; height:75px"></textarea> <br>
+          <label for = "g_points"> How many points does the goal deserve (priority)?
+            <span class = "req">  * </span>
+         </label> <br>
+          <select id = "points" >
+            <option>10</option>
+            <option>20</option>
+            <option>30</option>
+            <option>40</option>
+            <option>50</option>
+            <option>60</option>
+            <option>70</option>
+            <option>80</option>
+            <option>90</option>
+            <option>100</option>
+          </select> <br>
+        </form>
+        <div>
+        <button id="add_goal" onclick = "closeGoal();saveGoal();populateGoals();"> Add to Goals </button>
+        <button id="cancel_goal" onclick = "closeGoal();"> Cancel </button>
+        </div>
+      </div>
       <section id="entry_section">
       </section>
     </main>
   </div>
-  <script src = "js/goals_home.js"> </script>
 </body>
 
 </html>

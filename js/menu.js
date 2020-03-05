@@ -18,6 +18,7 @@ const loadHeader = () => {
 const randomBackground = () => {
   if (sessionStorage.getItem('last_background') == null) {
     var background = Math.random() * 5;
+    console.log(background)
     var background = Math.floor(background);
     console.log(background);
     sessionStorage.setItem('last_background', background);
@@ -53,10 +54,10 @@ const randomBackground = () => {
 
 const rotateBars = () => {
   btn = document.querySelector('.dropdownbtn');
+  btn.style.transition = 'transform 1s'
   btn.style.transform = 'rotate(90deg)';
 };
 const rotateBarsBackwards = () => {
-  console.log('hello')
   btn = document.querySelector('.dropdownbtn');
   btn.style.transform = 'rotate(0deg)';
 }

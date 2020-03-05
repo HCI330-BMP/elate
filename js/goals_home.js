@@ -1,39 +1,45 @@
-document.querySelector('#entry_section').innerHTML = ``;
+var date_start;
+const dateCreator = () => {
+  let n =  new Date();
+  let y = n.getFullYear();
+  let m = n.getMonth() + 1;
+  let d = n.getDate();
+  date_start = " " + m + "/" + d + "/" + y;
+  let hours = n.getHours(); // => 9
+  let minutes = n.getMinutes();
+  if (minutes < 10){
+    minutes = "0" + minutes;
+  }
 
-var b;
-
-console.log("session storage");
-for (b = 0; b < sessionStorage.length; b++) {
-    console.log(sessionStorage.key(b) + "=[" + sessionStorage.getItem(sessionStorage.key(b)) + "]");
+  document.getElementById('g_date_start').innerHTML += date_start;
+  document.getElementById('g_date_start').style.fontSize = "100%";
 }
 
-let num = 1;
-console.log(sessionStorage.getItem("g_date" +num));
-console.log((sessionStorage.getItem("g_date" +num) != null));
-console.log((sessionStorage.getItem("g_date" + 2) != null));
 
-let i = 1;
-while (i < 11){
-  if (sessionStorage.getItem("g_date" + i) != null){
-    let template = ``;
-    template = `
-    <div class="journal_entries">
-      <h1> Goal Title: ${sessionStorage.getItem("g_title" + i.toString())} </h1>
-      <p> Start Date: ${sessionStorage.getItem("g_date" + i.toString())}</p>
-      <p> End Date: ${sessionStorage.getItem("g_date_end" + i.toString())}</p>
-      <p> Goal Description: ${sessionStorage.getItem("g_entry" + i.toString())} </p>
-      <p> Reward: ${sessionStorage.getItem("g_reward" + i.toString())} </p>
-      <p> Points: ${sessionStorage.getItem("g_points" + i.toString())} </p>
-      <button onclick="completeGoal(${i});"> Complete Goal </button>
-    </div>
+const populateGoals = () => {
+  document.querySelector('#entry_section').innerHTML = ``;
+  let i = 1;
+  while (i < 11){
+    if (sessionStorage.getItem("g_date" + i) != null){
+      let template = ``;
+      template = `
+      <div class="journal_entries">
+        <h1> Goal Title: ${sessionStorage.getItem("g_title" + i.toString())} </h1>
+        <p> Start Date: ${sessionStorage.getItem("g_date" + i.toString())}</p>
+        <p> End Date: ${sessionStorage.getItem("g_date_end" + i.toString())}</p>
+        <p> Goal Description: ${sessionStorage.getItem("g_entry" + i.toString())} </p>
+        <p> Reward: ${sessionStorage.getItem("g_reward" + i.toString())} </p>
+        <p> Points: ${sessionStorage.getItem("g_points" + i.toString())} </p>
+        <button onclick="completeGoal(${i});"> Complete Goal </button>
+      </div>
 
-    `;
+      `;
 
 
-    document.querySelector('#entry_section').innerHTML += template;
+      document.querySelector('#entry_section').innerHTML += template;
+    }
+    i++;
   }
-  i++;
-  console.log("one loop done");
 }
 const reloadGoals = () => {
   document.querySelector('#entry_section').innerHTML = ``;
@@ -69,4 +75,51 @@ const completeGoal = (num) => {
   sessionStorage.removeItem("g_date" + num);
   reloadGoals();
 
+}
+const askGoal = () => {
+  form = document.querySelector("#content");
+  form.style.display = 'flex';
+  entries = document.querySelector("#entry_section");
+  entries.style.display = "none";
+  dateCreator();
+}
+
+const closeGoal= () => {
+  form = document.querySelector('#content');
+  form.style.display = 'none';
+  entries = document.querySelector("#entry_section");
+  entries.style.display = "flex";
+  dateCreator();
+  populateGoals();
+}
+
+const saveGoal = () => {
+  //Collect Entry Info
+  date = date_start;
+  date_end = document.querySelector("#g_date_end").value;
+  title = document.querySelector("#g_title").value;
+  description = document.querySelector('#g_entry').value;
+  reward = document.querySelector('#g_reward').value;
+  points = document.querySelector('#points').value;
+
+  //Check if first Entry
+  if(sessionStorage.getItem('goal_entry') == null){
+    var entry = 1;
+    sessionStorage.setItem('goal_entry', entry);
+  } else {
+    var entry = sessionStorage.getItem('goal_entry');
+    entry = parseInt(entry);
+    entry += 1;
+    sessionStorage.setItem('goal_entry', entry);
+  }
+
+  //Set Item
+  console.log(entry);
+  console.log('g_date' + entry.toString());
+  sessionStorage.setItem('g_date' + entry.toString(), date);
+  sessionStorage.setItem('g_date_end' + entry.toString(), date_end);
+  sessionStorage.setItem('g_title' + entry.toString(), title);
+  sessionStorage.setItem('g_entry' + entry.toString(), description);
+  sessionStorage.setItem('g_reward' + entry.toString(), reward);
+  sessionStorage.setItem('g_points' + entry.toString(), points);
 }
