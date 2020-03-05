@@ -31,11 +31,14 @@ const validateKey = () => {
   }
 };
 
+const currentUser = () => {
+  var parameters = location.search.substring(1).split("&");
+  var temp = parameters[0].split("=");
+  u_name = unescape(temp[1]);
+  current_user = u_name
+}
 const addUserInfo = () => {
-    var parameters = location.search.substring(1).split("&");
-    var temp = parameters[0].split("=");
-    u_name = unescape(temp[1]);
-    current_user = u_name
+    currentUser();
     fetch("js/users.json")
       .then(response => response.json())
       .then(users => {
@@ -53,6 +56,7 @@ const addUserInfo = () => {
 };
 
 const personalizeLinks = () => {
+  currentUser();
   var links = document.querySelectorAll('a');
   for (l of links) {
     if(l.getAttribute('href') == 'index.html'){
