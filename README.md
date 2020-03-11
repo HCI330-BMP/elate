@@ -26,15 +26,13 @@ In order to conduct our research we interviewed several people that fit our targ
 From our interviews we learned that the main need for our design was something to help alleviate stress and anxiety, ideally a way to stay positive and happy when getting down or feeling frustrated with school or outside work. We also learned that while certain users benefit from de-stressing activities like exercise and spending time outside, other users prefer completely different activities like staying indoors and playing video games. However, users also indicated that they would be open to new methods, which made us confident that our solution could make a change. We initially planned to cater our site exclusively to college students, as we felt that they would experience the highest levels of stress. However, testing and research helped us decide that our app would be targeted towards anyone experiencing stress and depressive thoughts. 
 
 ## Paper Prototyping (P4)
-![](https://lh4.googleusercontent.com/L9A4I8XGHkw10C3CtKIeQustcjsLRX8KqEy8kuUFAu_HjYus4WcBotH3XoK29yIEh-Ez4Bvy4TvHa30Jw2KeLEH7hlSEpF9uyv5deDpiW9vXRcATGBvPkDm9Y5KQivYUtSqD-ak8)
-<img src="https://lh4.googleusercontent.com/L9A4I8XGHkw10C3CtKIeQustcjsLRX8KqEy8kuUFAu_HjYus4WcBotH3XoK29yIEh-Ez4Bvy4TvHa30Jw2KeLEH7hlSEpF9uyv5deDpiW9vXRcATGBvPkDm9Y5KQivYUtSqD-ak8" alt="paper1" width="100"/>
-![](https://lh6.googleusercontent.com/3adr_unX-fbmWmCNwgyzDIvYt3QF6FEWhiPOt8A252YbFmxpoH7qgOLIJbnepd_rd80OTnbiCgbVDXq5AWx58hKCtX9td0L8f5C4YpI0FMo2Y47x9ghL2lv6lJVGSXRlT_3JhoPv)
 
-![](https://lh5.googleusercontent.com/63y6ebVWXWaIzkjL2bnU0t4hwXgsc0VCEdeNgMgYxGUE6RA7WRV_4wyvWu319CKzjmKGdQGMWkd_Icwy4ba-RXMRcAHTcmMXLefuIvNJqLlRygWmB3Yw9OJXNvIipiZ423-Xbb1E)
+<img src="https://lh4.googleusercontent.com/L9A4I8XGHkw10C3CtKIeQustcjsLRX8KqEy8kuUFAu_HjYus4WcBotH3XoK29yIEh-Ez4Bvy4TvHa30Jw2KeLEH7hlSEpF9uyv5deDpiW9vXRcATGBvPkDm9Y5KQivYUtSqD-ak8" alt="paper1" width="200"/><img src="https://lh6.googleusercontent.com/3adr_unX-fbmWmCNwgyzDIvYt3QF6FEWhiPOt8A252YbFmxpoH7qgOLIJbnepd_rd80OTnbiCgbVDXq5AWx58hKCtX9td0L8f5C4YpI0FMo2Y47x9ghL2lv6lJVGSXRlT_3JhoPv" alt="paper2" width="200"/>
 
-![](https://lh4.googleusercontent.com/oilMItcYcSvhVK16Pep4n8j4Hu8OlTuUDy7Qk1nxgcwzgksqxT7H14rBrI_veYxn5o2SqJpJ0GOKeaRkQWoPU4OZLZmvWeI2g8U3iZBAjteZ0dqgbIkY8GZ82HCVkthbJdCG_GbG)
+<img src="https://lh5.googleusercontent.com/63y6ebVWXWaIzkjL2bnU0t4hwXgsc0VCEdeNgMgYxGUE6RA7WRV_4wyvWu319CKzjmKGdQGMWkd_Icwy4ba-RXMRcAHTcmMXLefuIvNJqLlRygWmB3Yw9OJXNvIipiZ423-Xbb1E" alt="paper3" width="200"/>
+<img src="https://lh4.googleusercontent.com/oilMItcYcSvhVK16Pep4n8j4Hu8OlTuUDy7Qk1nxgcwzgksqxT7H14rBrI_veYxn5o2SqJpJ0GOKeaRkQWoPU4OZLZmvWeI2g8U3iZBAjteZ0dqgbIkY8GZ82HCVkthbJdCG_GbG" alt="paper4" width="200"/>
 
-![](https://lh4.googleusercontent.com/nmd0yyHhHv5F2hI2H1dv1uI97scLaH8xXWIRdThcxlfKoRFdGFN7EN6iM6Tv3joDSb64WWPE95sYNykxLwsZTwU-RnN2rWKrRTIGKyQ_QZBvAOMU6LzZKiHSnhMLtk8iw--iYQL4)
+<img src="https://lh4.googleusercontent.com/nmd0yyHhHv5F2hI2H1dv1uI97scLaH8xXWIRdThcxlfKoRFdGFN7EN6iM6Tv3joDSb64WWPE95sYNykxLwsZTwU-RnN2rWKrRTIGKyQ_QZBvAOMU6LzZKiHSnhMLtk8iw--iYQL4" alt="paper5" width="200"/>
 
 Overall, we got good feedback from our testers during the paper-prototyping phase. One of the primary problems we had during this round of testing was the users finding the articles to read. Although we were unable to implement this feature, users had difficulty finding the articles because they were labeled under the community tab. However, for all other tasks users were able to find their way around the paper prototype relatively easily, and had no issues navigating to other tasks which we did implement in the website.
 
