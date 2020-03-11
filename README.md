@@ -77,14 +77,14 @@ Though we were able to implement much of the design that we wanted, there is sti
 
 Repository Link: <https://github.com/HCI330-BMP/elate> 
 
-Working Prototype Link: <https://hci330-bmp.github.io/elate/>p8 
+Working Prototype Link: <https://hci330-bmp.github.io/elate/p8> 
 
 ## Instructions 
 
-The prototype works best in Google Chrome on Mac, but also works on Safari on Mac. In order to log in, use the following credentials:
+The prototype works best in Google Chrome on Mac. In order to log in, use the following credentials:
 
-Username: buymepants
+Username: `buymepants`
 
-Password: password2
+Password: `password2`
 
 From this point, you can navigate through the site as if you were a user.
