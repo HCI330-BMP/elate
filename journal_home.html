@@ -30,7 +30,7 @@
       </button>
       <div id="content">
         <h3> New Journal Entry</h3>
-        <form>
+        <form id = "entry_form">
           <label for "j_date"> Enter Date:
              <span class = "req">  * </span>
           </label> <br>
@@ -63,7 +63,7 @@
           <!-- Add a button that allows for additional tags to be added -->
         </form>
         <div class = "buttons">
-          <button id="add_entry" onclick="saveEntry(); closeEntry()"> Add to Journal </button>
+          <button id="add_entry" onclick="enterEntry();"> Add to Journal </button>
           <button id="cancel_goal" onclick="closeEntry();"> Cancel </button>
         </div>
       </div>

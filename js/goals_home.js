@@ -13,13 +13,13 @@ const dateCreator = () => {
 
   document.getElementById('g_date_start').innerHTML += date_start;
   document.getElementById('g_date_start').style.fontSize = "100%";
-}
+};
 
 
 const populateGoals = () => {
   document.querySelector('#entry_section').innerHTML = ``;
-  let i = 1;
-  while (i < 11){
+  let i = 11;
+  while (i > 0){
     if (sessionStorage.getItem("g_date" + i) != null){
       let template = ``;
       template = `
@@ -38,7 +38,7 @@ const populateGoals = () => {
 
       document.querySelector('#entry_section').innerHTML += template;
     }
-    i++;
+    i--;
   }
 }
 const reloadGoals = () => {
@@ -81,7 +81,6 @@ const askGoal = () => {
   form.style.display = 'flex';
   entries = document.querySelector("#entry_section");
   entries.style.display = "none";
-  dateCreator();
 }
 
 const closeGoal= () => {
@@ -93,7 +92,7 @@ const closeGoal= () => {
   populateGoals();
 }
 
-const saveGoal = () => {
+const enterGoal = () => {
   //Collect Entry Info
   date = date_start;
   date_end = document.querySelector("#g_date_end").value;
@@ -102,6 +101,17 @@ const saveGoal = () => {
   reward = document.querySelector('#g_reward').value;
   points = document.querySelector('#points').value;
 
+  req_vals = [date_start, date_end, title, description]
+  if (validateForm(req_vals)) {
+    console.log('true');
+    saveGoal();
+    closeGoal();
+    populateGoals();
+  } else {
+    return;
+  }
+};
+const saveGoal = () => {
   //Check if first Entry
   if(sessionStorage.getItem('goal_entry') == null){
     var entry = 1;
@@ -122,4 +132,14 @@ const saveGoal = () => {
   sessionStorage.setItem('g_entry' + entry.toString(), description);
   sessionStorage.setItem('g_reward' + entry.toString(), reward);
   sessionStorage.setItem('g_points' + entry.toString(), points);
-}
+};
+
+const validateForm = (vals) => {
+  for (v of vals){
+    if (v == '') {
+      alert('Required fields must be filled out')
+      return false;
+    }
+  }
+  return true;
+};
