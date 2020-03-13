@@ -69,7 +69,7 @@ Though we were able to implement much of the design that we wanted, there is sti
 
 Repository Link: <https://github.com/HCI330-BMP/elate> 
 
-Working Prototype Link: <https://hci330-bmp.github.io/elate/project_8> 
+Working Prototype Link: <https://hci330-bmp.github.io/elate/> 
 
 ## Instructions 
 
