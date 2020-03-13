@@ -4,7 +4,7 @@
     "password": "password1",
     "user_since": "02/19/2020",
     "email": "johnsmith1@gmail.com",
-    "n_jour": 8
+    "n_jour": 2
   },
   "user2": {
     "username": "buymepants",
@@ -12,5 +12,23 @@
     "user_since": "02/09/2020",
     "email": "buymepants@gmail.com",
     "n_jour": 2
-  }
+  },
+
+  "entries": {
+    "entry_1": {
+        "date": "2020-01-24",
+        "title": "Class Scheduling",
+        "entry": "Today, I just scheduled classes for my upcoming quarter. I recently decided to change my major and had a meeting with an advisor to help me decide what to register for.I am very excited to start the classes for my new Biology major, as I look to go to medical school. Hopefully I can keep this excitement going as I’m going through some of the hard parts of my classes!",
+        "feeling": "Excited",
+        "tag": "School"
+
+      },
+      "entry_2": {
+        "date": "2020-03-11",
+        "title": "Frisbee Tournament",
+        "entry": "So close! Our frisbee team played one of the best teams in the country today at the Miami Invitational Tournament. We only lost by one point, and we almost tied the score. The last disc was thrown a little bit too far for Kevin and we couldn’t tie it up. However, my team is looking really good and I think that we can perform really well this season. Maybe win Nationals? :)",
+        "feeling": "Hopeful",
+        "tag": "Frisbee"
+      }
+    }
 }

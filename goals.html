@@ -15,7 +15,7 @@
   <script src = "js/menu.js"> </script>
   <script src = "js/goals_home.js"> </script>
 </head>
-<body onload = "loadHeader(); populateGoals();personalizeLinks();">
+<body onload = "loadHeader(); populateGoals();personalizeLinks();dateCreator();">
   <div class = "container">
     <header>
     </header>
@@ -41,11 +41,9 @@
         </label> <br>
           <textarea id = "g_entry" name = "g_entry" placeholder= "e.g. 'Make one positive journal entry each day this week.'" style = "width:500px; height:75px"></textarea> <br>
           <label for = "g_reward"> Completion Reward:
-            <span class = "req">  * </span>
         </label> <br>
           <textarea id = "g_reward" name = "g_entry" placeholder= "e.g. 'Get pizza for dinner this Friday night!" style = "width:500px; height:75px"></textarea> <br>
           <label for = "g_points"> How many points does the goal deserve (priority)?
-            <span class = "req">  * </span>
          </label> <br>
           <select id = "points" >
             <option>10</option>
@@ -61,7 +59,7 @@
           </select> <br>
         </form>
         <div>
-        <button id="add_goal" onclick = "closeGoal();saveGoal();populateGoals();"> Add to Goals </button>
+        <button id="add_goal" onclick = "enterGoal();"> Add to Goals </button>
         <button id="cancel_goal" onclick = "closeGoal();"> Cancel </button>
         </div>
       </div>

@@ -21,8 +21,36 @@ const dateCreator = () => {
 const populateEntries = () => {
   document.querySelector('#entry_section').innerHTML =``;
 
-  let i = 1;
-  while (sessionStorage.getItem("j_date" + i) != null){
+  fetch("js/users.json")
+  .then(response => response.json())
+  .then(users => {
+    let template = ``;
+    template = `
+    <div class="journal_entries">
+      <h1> Journal Title: ${users['entries']['entry_1']['title']} </h1>
+      <p> Entry Date: ${users['entries']['entry_1']['date']} </p>
+      <p> Entry: ${users['entries']['entry_1']['entry']} </p>
+      <p> Feelings: ${users['entries']['entry_1']['feeling']} </p>
+      <p> Tags: ${users['entries']['entry_1']['tag']} </p>
+    </div>
+    <div class="journal_entries">
+      <h1> Journal Title: ${users['entries']['entry_2']['title']} </h1>
+      <p> Entry Date: ${users['entries']['entry_2']['date']} </p>
+      <p> Entry: ${users['entries']['entry_2']['entry']} </p>
+      <p> Feelings: ${users['entries']['entry_2']['feeling']} </p>
+      <p> Tags: ${users['entries']['entry_2']['tag']} </p>
+    </div>
+    `;
+    document.querySelector('#entry_section').innerHTML += template;
+
+  });
+  let i = 0;
+   if (sessionStorage.getItem('n_entry') != null){
+     i = sessionStorage.getItem('n_entry');
+   } else {
+     return;
+   }
+  while(i > 0) {
     let template = ``;
     template = `
     <div class="journal_entries">
@@ -32,43 +60,51 @@ const populateEntries = () => {
       <p> Feelings: ${sessionStorage.getItem("j_feels" + i.toString())} </p>
       <p> Tags: ${sessionStorage.getItem("j_tag" + i.toString())} </p>
     </div>
-
     `;
 
-    i++;
+    i--;
     document.querySelector('#entry_section').innerHTML += template;
-    console.log("one loop done");
   }
-}
+};
 
 
 const askEntry = () => {
-  form = document.querySelector("#content");
-  form.style.display = 'flex';
+  content = document.querySelector("#content");
+  content.style.display = 'flex';
+
   entries = document.querySelector("#entry_section");
   entries.style.display = "none";
-  dateCreator();
-}
+};
 
 const closeEntry = () => {
   form = document.querySelector('#content');
   form.style.display = 'none';
   entries = document.querySelector("#entry_section");
   entries.style.display = "flex";
-  dateCreator();
   populateEntries();
-}
-const saveEntry = () => {
+};
+const enterEntry = () => {
   //Collect Entry Info
-  //date = document.querySelector("#j_date").value;
-  date = final_date;
+  date = document.querySelector("#j_date").value;
   title = document.querySelector("#j_title").value;
   description = document.querySelector('#j_entry').value;
   feels = document.querySelector('#j_feelings').value;
   tag = document.querySelector('#j_tag').value;
 
   //Check if first Entry
-  if(sessionStorage.getItem('n_entry') == null){
+
+  req_vals = [date, title, description];
+  if (validateForm(req_vals)) {
+    saveEntry(date, title, description, feels,tag);
+    closeEntry();
+  } else {
+    return;
+  }
+};
+
+const saveEntry = (date, title, description, feels,tag) => {
+  //Set Item
+  if (sessionStorage.getItem('n_entry') == null) {
     var entry = 1;
     sessionStorage.setItem('n_entry', entry);
   } else {
@@ -77,19 +113,24 @@ const saveEntry = () => {
     entry += 1;
     sessionStorage.setItem('n_entry', entry);
   }
-
-  //Set Item
-  console.log(entry);
-  console.log('j_date' + entry.toString());
   sessionStorage.setItem('j_date' + entry.toString(), date);
   sessionStorage.setItem('j_title' + entry.toString(), title);
   sessionStorage.setItem('j_entry' + entry.toString(), description);
   sessionStorage.setItem('j_feels' + entry.toString(), feels);
   sessionStorage.setItem('j_tag' + entry.toString(), tag);
-  console.log('items saved')
-}
+};
 
 function textAreaAdjust() {
   el = document.querySelector('#j_entry')
   el.style.height = (el.scrollHeight > el.clientHeight) ? (el.scrollHeight)+"px" : "60px"
 }
+const validateForm = (vals) => {
+  for (v of vals){
+    if (v == '') {
+      alert('Required fields must be filled out')
+      return false;
+    }
+  }
+  return true;
+};
+

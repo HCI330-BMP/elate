@@ -42,13 +42,19 @@ const addUserInfo = () => {
     fetch("js/users.json")
       .then(response => response.json())
       .then(users => {
-        user = users[u_name]
+        user = users[u_name];
+        if (sessionStorage.getItem('n_entry') != null){
+          n_entry = parseInt(user['n_jour']) + parseInt(sessionStorage.getItem('n_entry'));
+        } else {
+          n_entry = user['n_jour']
+        }
+
         const template = `
         <h1> My Profile </h1>
         <p> User since ${user['user_since']} </p>
         <p> Username: ${user['username']} </p>
         <p> Email: ${user['email']} </p>
-        <p> Journals written: ${user['n_jour']} </p>
+        <p> Journals written: ${n_entry} </p>
         <button> Edit profile </button>
       `
       document.querySelector("#profbox").innerHTML = template;
