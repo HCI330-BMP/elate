@@ -61,11 +61,7 @@ Through our tasks, we successfully implemented three different components: 
 
 ## Reflection
 
--   What you managed to accomplish in the time you had
-
-During our project, we were able to achieve many of the goals that we had in mind in our original design. The user is able to log in with unique credentials, and depending on their credentials entered they will see unique results on the site. For example, they will be able to see their past entries and user information such as number of days on the app. In addition to customize user pages, the journals and goals page of our site are both fully functional. Users can create and delete both journals and goals freely, and we even added a gamification tool that allows them to be rewarded when completing long term goals. 
-
--   What the next steps of your app would be if you had more time
+During our project, we were able to achieve many of the goals that we had in mind in our original design. The user is able to log in with unique credentials, and depending on their credentials entered they will see unique results on the site. For example, they will be able to see their past entries and user information such as number of days on the app. In addition to customize user pages, the journals and goals page of our site are both fully functional. Users can create and delete both journals and goals freely, and we even added a gamification tool that allows them to be rewarded when completing long term goals. Throughout the process, we incorporated user suggestions in order to improve our overall design. For example, during the P5 phase, users noted that navigating the site was difficult after log in because the site defaulted to the "user info" page. In order to fix this, we instead routed users to a stand-alone "menu" page, and navigation issues were completely solved during the next round of user testing.
 
 Though we were able to implement much of the design that we wanted, there is still some room for additional features. We were unable to implement the "Community" page, where users could see the journals of their friends and learn about mental health through news and scholarly articles. In the future this would be the first area we would work on, as we would love to introduce a way for users to interact with one another through the app. Additionally, we wanted to implement another form of gamification where users' completion of goals would gradually complete a puzzle. This would be another form of encouragement for users to complete longer goals or enter in the journal every day.
 
@@ -73,7 +69,7 @@ Though we were able to implement much of the design that we wanted, there is sti
 
 Repository Link: <https://github.com/HCI330-BMP/elate> 
 
-Working Prototype Link: <https://hci330-bmp.github.io/elate/p8> 
+Working Prototype Link: <https://hci330-bmp.github.io/elate/project_8> 
 
 ## Instructions 
 
